@@ -1,0 +1,103 @@
+<div class="container">
+  <div class="row">
+    <div class="col l-2">
+      <div class="container-nav hide-on-tablet hide-on-mobile">
+        <button onclick="TongQuan()"><i class="fa-brands fa-bitcoin"></i>Tổng quan</button>
+        <button style="border-right: 3px solid var(--primary-color);"><i class="fa-solid fa-layer-group"></i>Loại CV</button>
+        <button onclick="Cv()"><i class="fa-solid fa-id-badge"></i>CV</button>
+        <button onclick="Ntd()"><i class="fa-solid fa-building"></i>Nhà Tuyển Dụng</button>
+        <button onclick="Uv()"><i class="fa-solid fa-user-pen"></i>Ứng Viên</button>
+        <button onclick="Nv()"><i class="fa-solid fa-user-check"></i>Nhân Viên</button>
+        <button><i class="fa-solid fa-newspaper"></i>Tin Tức</button>
+        <button><i class="fa-solid fa-gears"></i>Thiết Lập</button>
+      </div>
+    </div>
+    <div class="col l-4 m-12 c-12">
+      <div class="container-data">
+        <h3 class="container-data-tilte">
+          <i class="fa-solid fa-layer-group"></i> Nhập thông tin loại CV
+        </h3>
+        <form action="#" class="container-data-inpur" id="form-1">
+          <div class="form-group">
+            <label for="MaLoaiCv" class="form-label">Mã Loại CV: </label>
+            <input type="text" id="MaLoaiCv" name="MaLoaiCv" placeholder="Nhập mã CV ...tự động sinh nếu không nhập">
+            <span class="form-message"></span>
+          </div>
+          <div class="form-group">
+            <label for="TenLoaiCv" class="form-label">Tên Loại CV: </label>
+            <input type="text" id="TenLoaiCv" name="TenLoaiCv" placeholder="Nhập tên loại CV">
+            <span class="form-message"></span>
+          </div>
+        </form>
+        <hr>
+        <button onclick="ThemLoaiSanPham()" class="btn-form" style="background-color: rgba(44, 140, 15, 0.8);">Thêm Loại CV</button>
+        <button onclick="NhapMoi()" class="btn-form" style="background-color: rgba(227, 32, 21, 0.8);">Nhập Mới</button>
+        <button onclick="CapNhat()" class="btn-form" style="background-color: rgba(14, 87, 224, 0.8);">Cập Nhật Thông Tin</button>
+      </div>
+    </div>
+
+    <div class="col l-6 m-12 c-12">
+      <div class="container-tabledata">
+        <div class="container-tabledata-title">
+          <h3>
+            <i class="fa-solid fa-list"></i> Danh sách loại Cv
+          </h3>
+          <button class="btn-form">
+            <i class="fa-solid fa-trash-can"></i>
+            Xóa Chọn
+          </button>
+        </div>
+        <div class="container-tabledata-search">
+          <input type="text" placeholder="Nhập mã, tên loại CV...">
+          <button class="btn-form">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            Tìm Kiếm
+          </button>
+        </div>
+        <div class="container-tabledata-table">
+          <table>
+            <thead>
+            <tr>
+              <th>
+                <input type="checkbox" onclick="CheckAll(this)">
+              </th>
+              <th>Mã loại CV</th>
+              <th>Tên loại CV</th>
+              <th>Thao tác</th>
+            </tr>
+            </thead>
+            <tbody id="container-tabledata-table-tbody">
+            <!-- <tr style="text-align: center;">
+                <td>
+                    <input type="checkbox">
+
+                </td>
+                <td>5555551</td>
+                <td>Kinh Doanh</td>
+                <td>
+                    <i class="fa-solid fa-pen-to-square" style="margin-right: 5px; color: var(--primary-color); cursor: pointer;"></i>
+                    <i class="fa-solid fa-trash-can" style="color: var(--primary-color); cursor: pointer;"></i>
+                </td>
+            </tr> -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="container-sum">
+        <div class="container-sum-quantity">
+          Số Lượng Cv Là : <span id="quantity"></span>
+        </div>
+        <div class="container-sum-page">
+          <button class="form-btn"><i class="fas fa-angle-left"></i></button>
+          <button class="form-btn">1</button>
+          <button class="form-btn">2</button>
+          <button class="form-btn">3</button>
+          <button class="form-btn">4</button>
+          <button class="form-btn">5</button>
+          <button class="form-btn">6</button>
+          <button class="form-btn"><i class="fas fa-angle-right"></i></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

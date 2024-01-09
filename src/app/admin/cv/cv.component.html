@@ -1,0 +1,190 @@
+<div class="container">
+  <div class="row">
+    <div class="col l-2 ">
+      <div class="container-nav hide-on-tablet hide-on-mobile">
+        <button onclick="TongQuan()"><i class="fa-brands
+                                    fa-bitcoin"></i>Tổng quan</button>
+        <button onclick="LoaiCv()"><i class="fa-solid
+                                    fa-layer-group"></i>Loại CV</button>
+        <button style="border-right: 3px solid
+                                var(--primary-color);"><i class="fa-solid
+                                    fa-id-badge"></i>CV</button>
+        <button onclick="Ntd()"><i class="fa-solid fa-building"></i>Nhà
+          Tuyển Dụng</button>
+        <button onclick="Uv()"><i class="fa-solid fa-user-pen"></i>Ứng Viên</button>
+        <button onclick="Nv()"><i class="fa-solid fa-user-check"></i>Nhân
+          Viên</button>
+        <button><i class="fa-solid fa-newspaper"></i>Tin Tức</button>
+        <button><i class="fa-solid fa-gears"></i>Thiết Lập</button>
+      </div>
+    </div>
+    <div class="col l-4 m-12 c-12">
+      <div class="container-data">
+        <h3 class="container-data-tilte">
+          <i class="fa-solid fa-layer-group"></i> Nhập thông tin CV
+        </h3>
+        <form action="#" class="container-data-input" id="form-1">
+          <div class="form-group">
+            <label for="loaicv" class="form-label">Loại Cv: </label>
+            <select name="loaicv" id="loaicv">
+              <option value="choose">--Chọn Loại Cv</option>
+              <option value="Công nghệ thông tin">Công
+                nghệ thông tin</option>
+              <option value="Kinh doanh / Bán Hàng">Kinh
+                doanh / Bán Hàng</option>
+              <option value="Bảo Hiểm">Bảo Hiểm</option>
+              <option value="Bất động sản">Bất động sản</option>
+              <option value="Nhà Hàng / Khách Sạn">Nhà
+                Hàng / Khách Sạn</option>
+              <option value="Chứng Khoán">Chứng Khoán</option>
+              <option value="Xây Dựng">Xây Dựng</option>
+              <option value="Điện Tử / Cơ Khí">Điện Tử /
+                Cơ Khí</option>
+              <option value="Thời Trang">Thời Trang</option>
+              <option value="Du Lịch">Du Lịch</option>
+            </select>
+            <span class="form-message"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="diadiem" class="form-label">Địa điểm làm việc: </label>
+            <select name="diadiem" id="diadiem">
+              <option value="choose">--Chọn Địa Điểm</option>
+              <option value="Tất cả">Tất cả</option>
+              <option value="Hà Nội">Hà Nội</option>
+              <option value="Hưng Yên">Hưng Yên</option>
+              <option value="Hải Phòng">Hải Phòng</option>
+              <option value="Đà Nẵng">Đà Nẵng</option>
+              <option value="TP.Hồ Chí Minh">Tp.Hồ Chí
+                Minh</option>
+              <option value="Bình Dương">Bình Dương</option>
+            </select>
+            <span class="form-message"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="MaCv" class="form-label">Mã CV: </label>
+            <input type="text" id="MaCv" name="MaCv" placeholder="Nhập mã cv...Tự động sinh nếu không nhập !">
+            <span class="form-message"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="TenCv" class="form-label">Tên CV: </label>
+            <input type="TenCv" id="TenCv" name="TenCv" placeholder="Nhập tên cv !">
+            <span class="form-message"></span>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Hình Ảnh: </label>
+            <input name="hinhanh" type="file" id="ImgCv" style="border:1px solid #878787 ;" onchange="LoadFile(event)">
+            <span class="form-message"></span>
+          </div>
+
+          <div style="margin-bottom: 20px ;">
+            <span>View: </span>
+            <img id="Viewing" style="max-width:
+                                        180px;max-height: 180px;margin-top:
+                                        10px;margin-left: 130px;">
+          </div>
+
+          <div class="form-group">
+            <label for="Chungchicv" class="form-label">Chứng Chỉ: </label>
+            <input type="text" id="Chungchicv" name="Chungchicv" placeholder="Chứng chỉ">
+            <span class="form-message"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="Kynang" class="form-label">Các kỹ năng: </label>
+            <input type="text" id="Kynang" name="Kynang" placeholder="Kỹ năng">
+            <span class="form-message"></span>
+          </div>
+
+
+        </form>
+        <hr>
+        <button onclick="ThemCv()" class="btn-form" style="background-color: rgba(44, 140, 15,
+                                0.8);">Thêm CV</button>
+        <button onclick="NhapMoi()" class="btn-form" style="background-color: rgba(227, 32, 21,
+                                0.8);">Nhập Mới</button>
+        <button onclick="CapNhat()" class="btn-form" style="background-color: rgba(14, 87, 224,
+                                0.8);">Cập Nhật Thông Tin</button>
+      </div>
+    </div>
+
+    <div class="col l-6 m-12 c-12">
+      <div class="container-tabledata">
+        <div class="container-tabledata-title">
+          <h3>
+            <i class="fa-solid fa-list"></i> Danh sách Cv
+          </h3>
+          <button class="btn-form">
+            <i class="fa-solid fa-trash-can"></i>
+            Xóa Chọn
+          </button>
+        </div>
+        <div class="container-tabledata-search">
+          <input type="text" placeholder="Nhập mã, tên CV...">
+          <button class="btn-form">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            Tìm Kiếm
+          </button>
+        </div>
+        <div class="container-tabledata-table">
+          <table>
+            <thead>
+            <tr>
+              <th>
+                <input type="checkbox" onclick="CheckAll(this)">
+              </th>
+              <th>Mã Cv</th>
+              <th>Tên Cv</th>
+              <th>Hình Ảnh</th>
+              <th>Chứng Chỉ</th>
+              <th>Kỹ Năng</th>
+              <th>Loại Cv</th>
+              <th>Địa điểm làm việc</th>
+              <th>Thao Tác</th>
+
+            </tr>
+            </thead>
+            <tbody id="container-tabledata-table-tbody">
+            <!-- <tr style="text-align: center;">
+                <td>
+                    <input type="checkbox">
+                </td>
+                <td>5555555</td>
+                <td style="padding: 25px 10px;">Ứng Tuyển Nhân Viên Kinh Doanh</td>
+                <td><img style="width: 100px; height: 100px; object-fit: contain;" src="../asset/Img/LogoCtyHopTac/1.webp" alt=""></td>
+                <td>Đại Học SPKT Hưng Yên</td>
+                <td>Làm việc nhóm, phân tích giải quyết vấn đề...</td>
+                <td>Kinh Doanh</td>
+                <td>Hà Nội</td>
+                <td>
+                    <i class="fa-solid fa-pen-to-square" style="margin-right: 5px; color: var(--primary-color); cursor: pointer;"></i>
+                    <i class="fa-solid fa-trash-can" style="color: var(--primary-color); cursor: pointer;"></i>
+                </td>
+            </tr> -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="container-sum">
+        <div class="container-sum-quantity">
+          Số Lượng Cv Là : <span id="quantity"></span>
+        </div>
+        <div class="container-sum-page">
+          <button class="form-btn"><i class="fas
+                                        fa-angle-left"></i></button>
+          <button class="form-btn">1</button>
+          <button class="form-btn">2</button>
+          <button class="form-btn">3</button>
+          <button class="form-btn">4</button>
+          <button class="form-btn">5</button>
+          <button class="form-btn">6</button>
+          <button class="form-btn"><i class="fas
+                                        fa-angle-right"></i></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
